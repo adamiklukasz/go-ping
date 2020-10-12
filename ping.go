@@ -32,7 +32,7 @@ func PingN(targetAddr string, count int, interval time.Duration) (Stats, error) 
 	for i := 0; i < count; i++ {
 		d, err := Ping(targetAddr)
 		if err != nil {
-			return s, nil
+			return s, err
 		}
 
 		sum += d
